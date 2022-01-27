@@ -1,3 +1,4 @@
+import Cart from "./CartWidjet";
 import "./NavBar.css";
 
 const NavBar = (props) => {
@@ -14,7 +15,7 @@ const NavBar = (props) => {
                 </ul>
             </div>
 
-            
+            <Cart/>
 
             
         </nav>

@@ -1,5 +1,6 @@
 import './App.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemList/ItemListContainer';
 
 
 const orangeColor = "orange";
@@ -10,14 +11,11 @@ const redColor = "red";
 function App() {
   return (
     <div className="App">
+
       
-        <NavBar myColor={blueColor} />
+      <NavBar myColor={blueColor} />
 
-
-        
-        <p>
-          Bienvenido a Tiendas W
-        </p>
+      <ItemListContainer greeting="Bienvenido a Tiendas W" />
         
       
     </div>

@@ -1,7 +1,6 @@
 .Navigation {
   display: flex;
-  background-color: black;
-  color: white;
+  background-color: rgb(217, 217, 248);
   justify-content: space-around;
   align-items: center;
   min-height: 50px;
@@ -17,5 +16,10 @@ ul {
 
 ul li {
   list-style-type: none;
-  color: red;
+  color: blue;
+}
+
+.navbar-carrito {
+  width: 30px;
+  height: 30px;
 }
