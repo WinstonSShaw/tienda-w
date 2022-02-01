@@ -1,0 +1,14 @@
+.divContador {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+
+  align-items: center;
+  background-color: gainsboro;
+  width: 10vw;
+  border: solid 1px blue;
+}
+
+.divContador div button {
+  margin: 5;
+}
