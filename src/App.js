@@ -3,10 +3,12 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
 
+//import axios from 'axios';
 
-const orangeColor = "orange";
+
+
 const blueColor = "blue";
-const redColor = "red";
+
 
 
 function App() {
