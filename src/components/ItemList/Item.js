@@ -1,19 +1,14 @@
 import * as React from 'react';
-// import Card from '@mui/material/Card';
 
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-
-// import Typography from '@mui/material/Typography';
 
 import { Card, CardContent, CardMedia, Typography} from '@mui/material';
 import ItemCount from '../ItemCount/ItemCount';
-
+import './Item.css';
 
 
 export default function MediaCard({data}) {
   return (
-    <Card className="tarjeta" style={{margin:40}} sx={{ maxWidth: 345 }}>
+      <Card className="tarjeta" style={{margin:40}} sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
@@ -35,5 +30,6 @@ export default function MediaCard({data}) {
       <ItemCount stock={5} inicial ={1}/>
 
     </Card>
+    
   );
 }

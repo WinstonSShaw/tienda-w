@@ -1,3 +1,12 @@
 .tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
   margin: 40;
+}
+
+.Link {
+  list-style-type: none;
 }

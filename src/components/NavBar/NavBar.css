@@ -1,5 +1,6 @@
 .Navigation {
   display: flex;
+  width: 100%;
   background-color: rgb(217, 217, 248);
   justify-content: space-around;
   align-items: center;

@@ -1,9 +1,16 @@
 import './App.css';
+
+
+// REACT ROUTER DOM
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+//COMPONENTS
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemList/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
 
-//import axios from 'axios';
+//VIEWS
+import ItemDetailContainer from './VIEWS/ItemDetail/ItemDetailContainer';
+import Home from './VIEWS/Home/Home';
 
 
 
@@ -11,20 +18,30 @@ const blueColor = "blue";
 
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
 
       
-      <NavBar myColor={blueColor} />
+        <NavBar myColor={blueColor} />
 
-      <ItemListContainer greeting="Bienvenido a Tiendas W" />
+        <ItemListContainer greeting="Bienvenido a Tiendas W" />
 
-      <ItemCount stock={5} inicial ={1} />
-      <ItemCount stock={0} inicial ={0} />
-        
-      
-    </div>
+
+
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/detail/:id' element={<ItemDetailContainer />} />
+
+        </Routes>
+          
+
+      </div>
+
+    </Router>
+    
   );
 }
 

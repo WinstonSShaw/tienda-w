@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import "./ItemCount.css";
 
 
-const ItemCount = (props) => {
-    const [contador, setContador] = useState(props.inicial);
+const ItemCount = ({stock, inicial}) => {
+    const [contador, setContador] = useState(inicial);
 
     const contadorUp = () =>{
         
-        setContador(contador === props.stock ? contador = props.stock : contador +1);
+        setContador(contador === stock ? contador = stock : contador +1);
         
     };
 
@@ -22,7 +22,7 @@ const ItemCount = (props) => {
             <p>Cantidad: {contador}</p>
             <div>
                 <button onClick={contadorDown} >-</button>
-                <button onClick={contadorUp} disabled={props.stock === 0 ? true : false}>+</button>
+                <button onClick={contadorUp} disabled={stock === 0 ? true : false}>+</button>
                 
             </div>
             
@@ -30,5 +30,6 @@ const ItemCount = (props) => {
 
     );
 }
+
 
 export default ItemCount;
