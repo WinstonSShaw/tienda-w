@@ -22,13 +22,15 @@ import axios from 'axios';
 import { useParams } from 'react-router';
 
 //LINK ROUTER DOM
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 //COMPONENTS
 import ItemDetail from './ItemDetail';
+import Spinner from '../../components/Spinner/Spinner';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     console.log(item);
 
@@ -38,20 +40,26 @@ const ItemDetailContainer = () => {
     console.log(userId);
 
     useEffect(() => {
-        axios(`https://fakestoreapi.com/products/${userId}`).then((res) => setItem(res.data));
+        axios(`https://breakingbadapi.com/api/characters/${userId}`).then((res) => setItem(res.data));
+
+        setTimeout(() => {
+			setIsLoading(false);
+		}, 1000);
     }, [userId]);
 
     return (
         <div >
-            {item.map((it) => {
+            {isLoading ? ( <Spinner />) :
+            (<div>
+                {item.map((prod) => {
 				return (
-					<div key={it.id}>
-                        <Link to={`/detail/${it.id}`} className='Link'>
-                            <ItemDetail data={it} key={it.id} />
-                        </Link>
+					<div key={prod.id}>
+                            <ItemDetail data={prod} />
 					</div>
-				);
-			})}
+				    );
+			    })}
+            </div>)}
+            
         </div>
 
     )

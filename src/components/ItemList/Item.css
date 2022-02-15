@@ -7,6 +7,13 @@
   margin: 40;
 }
 
+.divItemListContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 40px 0 40px 0;
+  gap: 40px;
+}
+
 .Link {
   list-style-type: none;
 }

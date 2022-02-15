@@ -6,11 +6,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 //COMPONENTS
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemList/ItemListContainer';
+
 
 //VIEWS
 import ItemDetailContainer from './VIEWS/ItemDetail/ItemDetailContainer';
 import Home from './VIEWS/Home/Home';
+import About from './VIEWS/About/About';
 
 
 
@@ -26,7 +27,7 @@ const App = () => {
       
         <NavBar myColor={blueColor} />
 
-        <ItemListContainer greeting="Bienvenido a Tiendas W" />
+        
 
 
 
@@ -34,6 +35,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/detail/:id' element={<ItemDetailContainer />} />
+          <Route path='/about' element={<About />} />
 
         </Routes>
           

@@ -1,5 +1,10 @@
+import React from "react";
+
 import Cart from "./CartWidjet";
 import "./NavBar.css";
+
+//LINK ROUTER DOM
+import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
     return(
@@ -8,10 +13,10 @@ const NavBar = (props) => {
 
             <div>
                 <ul>
-                    <li>Home</li>
-                    <li>Consolas</li>
-                    <li>Juegos</li>
-                    <li>Promociones</li>
+                    <Link to='/' className="Link">Home</Link>
+                    <Link to='/consolas' className="Link">Consolas</Link>
+                    <Link to='/juegos' className="Link">Juegos</Link>
+                    <Link to='/about' className="Link">About</Link>
                 </ul>
             </div>
 

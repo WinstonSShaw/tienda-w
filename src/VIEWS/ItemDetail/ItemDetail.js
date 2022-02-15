@@ -35,11 +35,10 @@ export default ItemDetail;
 
 */
 
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import {Card, CardContent, CardMedia, Typography} from '@mui/material';
+
+//COMPONENTS
+import ItemCount from '../../components/ItemCount/ItemCount';
 
 export default function ItemDetail({data}) {
   return (
@@ -47,20 +46,29 @@ export default function ItemDetail({data}) {
       <CardMedia
         component="img"
         height="140"
-        image={data.image}
+        image={data.img}
         alt="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data.title}
+          {data.name}
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
-          {data.price}
+          {data.status}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {data.description}
+          {data.nickname}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {data.birthday}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {data.occupation}
         </Typography>
       </CardContent>
+
+      <ItemCount stock={5} inicial ={1}/>
+
 
     </Card>
   );
