@@ -34,13 +34,22 @@ const ItemDetail = () => {
 export default ItemDetail;
 
 */
+import React, {useContext} from 'react';
 
 import {Card, CardContent, CardMedia, Typography} from '@mui/material';
 
 //COMPONENTS
 import ItemCount from '../../components/ItemCount/ItemCount';
 
+//CONTEXT
+import { CartContext } from '../../Context/CartContext';
+
+
 export default function ItemDetail({data}) {
+  const [cartItems, setCartItems] = useContext(CartContext);
+
+  console.log('DATA', cartItems);
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia

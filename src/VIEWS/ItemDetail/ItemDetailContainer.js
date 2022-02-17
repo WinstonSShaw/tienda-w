@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
 export default ItemDetailContainer;
 */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router';
 
@@ -28,9 +28,12 @@ import { useParams } from 'react-router';
 import ItemDetail from './ItemDetail';
 import Spinner from '../../components/Spinner/Spinner';
 
+
+
 const ItemDetailContainer = () => {
     const [item, setItem] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    
 
     console.log(item);
 

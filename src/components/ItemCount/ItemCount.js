@@ -1,9 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import "./ItemCount.css";
 
 
+import { CartContext } from '../../Context/CartContext';
+
 const ItemCount = ({stock, inicial}) => {
     const [contador, setContador] = useState(inicial);
+    const [cartItems, setCartItems] = useContext(CartContext);
 
     const contadorUp = () =>{
         
@@ -17,7 +20,8 @@ const ItemCount = ({stock, inicial}) => {
     };
 
     const Agregar = () => {
-        alert(`Compro agrego ${contador} objetos al carrito `)
+        alert(`Agrego ${contador} objetos al carrito `)
+        setCartItems(contador);
     }
 
 
@@ -30,6 +34,7 @@ const ItemCount = ({stock, inicial}) => {
                 
             </div>
             <button onClick={Agregar}>Agregar</button>
+            
             
             
         </div>

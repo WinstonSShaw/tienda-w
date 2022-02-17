@@ -24,3 +24,7 @@ ul li {
   width: 30px;
   height: 30px;
 }
+
+.div-carrito {
+  display: flex;
+}
