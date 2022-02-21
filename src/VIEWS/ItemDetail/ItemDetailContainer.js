@@ -17,6 +17,18 @@ const ItemDetailContainer = () => {
 export default ItemDetailContainer;
 */
 
+/*
+(<div>
+    {item.map((prod) => {
+    return (
+        <div key={prod.id}>
+                <ItemDetail data={prod} />
+        </div>
+        );
+    })}
+</div>)}
+*/
+
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router';
@@ -43,7 +55,7 @@ const ItemDetailContainer = () => {
     console.log(userId);
 
     useEffect(() => {
-        axios(`https://breakingbadapi.com/api/characters/${userId}`).then((res) => setItem(res.data));
+        axios(`https://fakestoreapi.com/products/${userId}`).then((res) => setItem(res.data));
 
         setTimeout(() => {
 			setIsLoading(false);
@@ -52,16 +64,11 @@ const ItemDetailContainer = () => {
 
     return (
         <div >
-            {isLoading ? ( <Spinner />) :
-            (<div>
-                {item.map((prod) => {
-				return (
-					<div key={prod.id}>
-                            <ItemDetail data={prod} />
-					</div>
-				    );
-			    })}
-            </div>)}
+            {isLoading ? ( <Spinner />) : 
+            <div key={item.id}>
+                            <ItemDetail data={item} />
+			</div>
+            }
             
         </div>
 
@@ -69,3 +76,4 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer;
+

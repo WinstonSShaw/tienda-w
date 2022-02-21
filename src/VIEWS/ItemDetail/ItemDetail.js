@@ -48,35 +48,36 @@ import { CartContext } from '../../Context/CartContext';
 export default function ItemDetail({data}) {
   const [cartItems, setCartItems] = useContext(CartContext);
 
-  console.log('DATA', cartItems);
+  //console.log('DATA', cartItems);
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
-        image={data.img}
+        image={data.image}
         alt="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data.name}
+          {data.title}
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
-          {data.status}
+          {data.price}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {data.nickname}
+          {data.description}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {data.birthday}
+          Rating: {data.rating.rate}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {data.occupation}
+          Stock disponible: {data.rating.count}
         </Typography>
       </CardContent>
 
-      <ItemCount stock={5} inicial ={1}/>
+      <ItemCount stock={data.rating.count} inicial ={1} />
+      
 
 
     </Card>

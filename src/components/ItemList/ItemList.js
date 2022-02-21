@@ -57,7 +57,7 @@ const ItemList = () => {
 
     useEffect (() => {
 
-        axios('https://breakingbadapi.com/api/characters').then((res) => setProducts(res.data));
+        axios('https://fakestoreapi.com/products').then((res) => setProducts(res.data));
 
         setTimeout(() => {
             setIsLoading(false);
@@ -81,8 +81,8 @@ const ItemList = () => {
 
                     <div key={product.id}>
                         {isLoading ? <Spinner /> : 
-                        <Link to={`/detail/${product.char_id}`} className='Link'>
-                            <Item data={product} key={product.char_id} />
+                        <Link to={`/detail/${product.id}`} className='Link'>
+                            <Item data={product} key={product.id} />
                         </Link>}
                         {/* 
                     <Link to={`/detail/${product.id}`} className='Link'>

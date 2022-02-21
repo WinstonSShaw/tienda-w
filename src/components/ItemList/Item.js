@@ -11,18 +11,18 @@ export default function Item({data}) {
         <CardMedia
           component="img"
           height="140"
-          image={data.img}
+          image={data.image}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {data.name}
+            {data.title}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            {data.status}
+            $ {data.price}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {data.nickname}
+            Disponible: {data.rating.count}
           </Typography>
         </CardContent>
 

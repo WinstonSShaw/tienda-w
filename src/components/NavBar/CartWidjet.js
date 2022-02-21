@@ -24,7 +24,8 @@ const Cart = () => {
             <img className="navbar-carrito" src={cartImg} alt="Carrito" />
             <p>{cartItems}</p>
             <Link to={`/cart`}>
-                <button style={{margin:10} }>Comprar</button>
+                {cartItems === 0 ? null : <button style={{margin:10} }>Comprar</button>}
+                
             </Link>
             
 

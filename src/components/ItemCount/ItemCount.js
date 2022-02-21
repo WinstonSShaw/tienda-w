@@ -8,6 +8,9 @@ const ItemCount = ({stock, inicial}) => {
     const [contador, setContador] = useState(inicial);
     const [cartItems, setCartItems] = useContext(CartContext);
 
+
+
+
     const contadorUp = () =>{
         
         setContador(contador === stock ? contador = stock : contador +1);
@@ -22,21 +25,24 @@ const ItemCount = ({stock, inicial}) => {
     const Agregar = () => {
         alert(`Agrego ${contador} objetos al carrito `)
         setCartItems(contador);
+
     }
+
 
 
     return(
         <div className='divContador'>
-            <p>Cantidad: {contador}</p>
+  
             <div>
-                <button onClick={contadorDown} >-</button>
-                <button onClick={contadorUp} disabled={stock === 0 ? true : false}>+</button>
-                
+                <p>Cantidad: {contador}</p>
+            <div>
+            <button onClick={contadorDown} >-</button>
+            <button onClick={contadorUp} disabled={stock === 0 ? true : false}>+</button>
+            
             </div>
-            <button onClick={Agregar}>Agregar</button>
-            
-            
-            
+                <button onClick={Agregar}>Agregar</button>
+            </div>
+       
         </div>
 
     );
