@@ -1,6 +1,4 @@
-import { margin } from "@mui/system";
 import React, {useContext} from "react";
-
 
 import cartImg from "../../assets/Carrito.png";
 
@@ -16,18 +14,18 @@ import { CartContext } from "../../Context/CartContext";
 */
 
 const Cart = () => {
-    const [cartItems, setCartItems] = useContext(CartContext);
+    const [cartItems, setCartItems, addNewItem, cantComprar, cantContador, deleteItem, clearCart] = useContext(CartContext);
 
     return (
         <div className="div-carrito">
             
             <img className="navbar-carrito" src={cartImg} alt="Carrito" />
-            <p>{cartItems}</p>
+            <p>{cartItems.length}</p>
             <Link to={`/cart`}>
                 {cartItems === 0 ? null : <button style={{margin:10} }>Comprar</button>}
                 
             </Link>
-            
+            <button style={{margin:10}} onClick={() => clearCart()}>Limpiar</button>
 
 
             

@@ -38,6 +38,9 @@ import React, {useContext} from 'react';
 
 import {Card, CardContent, CardMedia, Typography} from '@mui/material';
 
+//LINK ROUTER DOM
+import { Link } from 'react-router-dom';
+
 //COMPONENTS
 import ItemCount from '../../components/ItemCount/ItemCount';
 
@@ -46,7 +49,7 @@ import { CartContext } from '../../Context/CartContext';
 
 
 export default function ItemDetail({data}) {
-  const [cartItems, setCartItems] = useContext(CartContext);
+  const [cartItems, setCartItems, addNewItem, cantComprar, cantContador, deleteItem] = useContext(CartContext);
 
   //console.log('DATA', cartItems);
 
@@ -77,6 +80,14 @@ export default function ItemDetail({data}) {
       </CardContent>
 
       <ItemCount stock={data.rating.count} inicial ={1} />
+      
+
+      <Link to={`/cart`}>
+        {cartItems === 0 ? null : <button style={{margin:10}} onClick={() => addNewItem(data.id, data.title, data.price, data.description, data.category, data.image, data.rating)}  >Comprar</button>}
+                
+      </Link>
+
+      <button onClick={() => deleteItem(data.id)}>Borrar</button>
       
 
 

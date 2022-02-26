@@ -6,7 +6,7 @@ import { CartContext } from '../../Context/CartContext';
 
 const ItemCount = ({stock, inicial}) => {
     const [contador, setContador] = useState(inicial);
-    const [cartItems, setCartItems] = useContext(CartContext);
+    const [cartItems, setCartItems, addNewItem, cantComprar , cantContador] = useContext(CartContext);
 
 
 
@@ -24,7 +24,7 @@ const ItemCount = ({stock, inicial}) => {
 
     const Agregar = () => {
         alert(`Agrego ${contador} objetos al carrito `)
-        setCartItems(contador);
+        cantContador(contador);
 
     }
 

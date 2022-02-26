@@ -9,7 +9,7 @@ const styles = {
 const Cart = () => {
 	return (
 		<div style={styles.container}>
-			Cart
+			<h1>Cart</h1>
 			
 		</div>
 	);
