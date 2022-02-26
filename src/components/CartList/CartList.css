@@ -1,0 +1,15 @@
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  margin: 40;
+}
+
+.cartList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 40px 0 40px 0;
+  gap: 40px;
+}

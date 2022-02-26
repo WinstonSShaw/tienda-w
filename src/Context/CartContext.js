@@ -25,7 +25,7 @@ export const CartProvider = ({ children }) => {
     }
 
     const cantComprar = () => {
-        return cartItems.reduce((acum, valor) => acum + valor.comprar, 0);
+        cartItems.reduce((acum, valor) => acum + valor.comprar, 0);
     };
 
     const cantContador = (val) => {
