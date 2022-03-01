@@ -6,6 +6,7 @@ import { CartContext } from '../../Context/CartContext';
 
 //COMPONENTS
 import CartList from '../../components/CartList/CartList';
+import Shop from '../../components/Shop/Shop';
 
 const styles = {
 	container: {
@@ -35,6 +36,7 @@ const Cart = () => {
 
 			<div>
 				<CartList />
+				<Shop />
 			</div>
 			
 			
