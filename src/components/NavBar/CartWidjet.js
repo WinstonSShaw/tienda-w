@@ -17,12 +17,14 @@ const Cart = () => {
         <div className="div-carrito">
             
             <img className="navbar-carrito" src={cartImg} alt="Carrito" />
-            <p>{total}</p>
+            {cartItems.length === 0 ? null : <p>{total}</p>}
+            
             <Link to={`/cart`}>
-                {cartItems === 0 ? null : <button style={{margin:10} }>Comprar</button>}
-                
+                {cartItems.length === 0 ? null : <button style={{margin:10} }>Comprar</button>}  
             </Link>
-            <button style={{margin:10}} onClick={() => clearCart()}>Limpiar</button>
+
+            {cartItems.length === 0 ? null : <button style={{margin:10}} onClick={() => clearCart()}>Limpiar</button>}
+            
 
 
             
