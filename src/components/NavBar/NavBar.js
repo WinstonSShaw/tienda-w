@@ -1,29 +1,49 @@
 import React from "react";
 
+import { AppBar, Container, Toolbar } from '@mui/material';
+
+//COMPONENTS
 import Cart from "./CartWidjet";
 import "./NavBar.css";
+import CategoryMenu from "../CategoryMenu/CategoryMenu";
 
 //LINK ROUTER DOM
 import { Link } from 'react-router-dom';
 
+const styles = {
+	linkButton: {
+		textDecoration: 'none',
+		color: 'white',
+		fontSize: 18,
+		fontWeight: 'bold',
+	},
+	purchaseButton: {
+		color: 'grey',
+		fontSize: 18,
+		fontWeight: 'bold',
+	},
+};
+
 const NavBar = (props) => {
     return(
-        <nav className="Navigation" style={{border: `10px solid ${props.myColor}`}}>
+        <AppBar position='static' className='ResponsiveNavigation'>
+			<Container maxWidth='xl'>
+				<Toolbar disableGutters className='ResponsiveNavigationContainer'>
+        
             <h1>Tienda W</h1>
 
-            <div>
-                <ul>
-                    <Link to='/' className="Link">Home</Link>
-                    <Link to='/consolas' className="Link">Consolas</Link>
-                    <Link to='/cart' className="Link">Carrito</Link>
-                    <Link to='/about' className="Link">About</Link>
-                </ul>
-            </div>
+                    <Link to='/' style={styles.linkButton}>Home</Link>
+                    <CategoryMenu />
+                    <Link to='/cart' style={styles.linkButton}>Carrito</Link>
+                    <Link to='/about' style={styles.linkButton}>About</Link>
 
             <Cart/>
 
             
-        </nav>
+        
+                </Toolbar>
+			</Container>
+		</AppBar>
     );
 
 }

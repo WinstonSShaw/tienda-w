@@ -8,11 +8,6 @@ import { Link } from 'react-router-dom';
 //CONTEXT
 import { CartContext } from "../../Context/CartContext";
 
-/*
-<Link to={`/detail/${product.char_id}`} className='Link'>
-    <Item data={product} key={product.char_id} />
-</Link>}
-*/
 
 const Cart = () => {
     const [cartItems, setCartItems, addNewItem, cantComprar, cantContador, deleteItem, clearCart] = useContext(CartContext);

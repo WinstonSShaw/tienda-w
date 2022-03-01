@@ -1,39 +1,4 @@
-/*
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router';
 
-const ItemDetail = () => {
-    const [item, setItem] = useState([]);
-
-    console.log(item);
-
-    let id = useParams();
-    let userId = id.id;
-
-    console.log(userId);
-
-    useEffect(() => {
-        axios(`https://fakestoreapi.com/products/${userId}`).then((res) => setItem(res.data));
-    }, [userId]);
-
-    return (
-        <div>
-            {character.map((it) => {
-				return (
-					<div key={it.id}>
-						<ItemDetail data={it} />
-					</div>
-				);
-			})}
-        </div>
-
-    )
-}
-
-export default ItemDetail;
-
-*/
 import React, {useContext} from 'react';
 
 import {Card, CardContent, CardMedia, Typography} from '@mui/material';
@@ -71,19 +36,17 @@ export default function ItemDetail({data}) {
         <Typography variant="body2" color="text.secondary">
           {data.description}
         </Typography>
+        
         <Typography variant="body2" color="text.secondary">
-          Rating: {data.rating.rate}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Stock disponible: {data.rating.count}
+          Stock disponible: {data.count}
         </Typography>
       </CardContent>
 
-      <ItemCount stock={data.rating.count} inicial ={1} />
+      <ItemCount stock={data.count} inicial ={1} />
       
 
       <Link to={`/cart`}>
-        {cartItems === 0 ? null : <button style={{margin:10}} onClick={() => addNewItem(data.id, data.title, data.price, data.description, data.category, data.image, data.rating)}  >Comprar</button>}
+        {cartItems === 0 ? null : <button style={{margin:10}} onClick={() => addNewItem(data.id, data.title, data.price, data.description, data.category, data.image, data.count)}  >Comprar</button>}
                 
       </Link>
 

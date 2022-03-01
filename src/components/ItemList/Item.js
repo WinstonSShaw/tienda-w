@@ -22,7 +22,7 @@ export default function Item({data}) {
             $ {data.price}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Disponible: {data.rating.count}
+            Disponible: {data.count}
           </Typography>
         </CardContent>
 
