@@ -21,3 +21,16 @@ https://mui.com/
 
 ##Utilice React Router Dom para obtener un enrutamiento dinamico gracias a componentes
 https://v5.reactrouter.com/web/guides/quick-start
+
+##Images
+Home
+![home](https://user-images.githubusercontent.com/81720672/158305084-23e0f49d-180c-438e-bdc9-4d5d9e70cc7b.PNG)
+Categories
+![categories](https://user-images.githubusercontent.com/81720672/158305118-73660ac4-59ea-4a64-bb48-1de5678a513b.PNG)
+Item
+![item](https://user-images.githubusercontent.com/81720672/158305193-d723d0a8-5589-41c1-99c4-a10564f86adf.PNG)
+Cart
+![cart](https://user-images.githubusercontent.com/81720672/158305154-79359ed5-fdc1-4f2a-8c50-fe69f11c3068.PNG)
+buy
+![buy](https://user-images.githubusercontent.com/81720672/158305230-78a78c96-3ae6-4a04-9c89-7490a6d9e62f.PNG)
+
