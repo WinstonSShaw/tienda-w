@@ -60,5 +60,3 @@ const App = () => {
 
 export default App;
 
-// <img src={logo} className="App-logo" alt="logo" />
-
