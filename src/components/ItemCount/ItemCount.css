@@ -3,11 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: gainsboro;
+  background-color: white;
   width: 10vw;
-  border: solid 1px blue;
+  border: solid 5px rgb(122, 32, 32);
+  border-radius: 15px;
 }
 
 .divContador div button {
   margin: 5;
+}
+
+.botones {
+  border-radius: 10px;
 }

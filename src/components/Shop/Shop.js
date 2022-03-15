@@ -50,11 +50,11 @@ const Shop = () => {
 	const onSubmit = async (e) => {
         
 		e.preventDefault();
-		console.log(values);
+
 		const docRef = await addDoc(collection(db, 'purchases'), {
 			values, itemsCompr,
 		});
-		console.log('Document written with ID: ', docRef.id);
+
 		setPurchaseID(docRef.id);
 
         
@@ -63,8 +63,7 @@ const Shop = () => {
 
 	return (
 		<div style={styles.containerShop}>
-			
-			<form className='FormContainer' onSubmit={onSubmit}>
+			{cartItems.length === 0 ? null : <form className='FormContainer' onSubmit={onSubmit}>
 				<TextField
 					placeholder='Name'
 					style={{ margin: 10, width: 400 }}
@@ -86,8 +85,11 @@ const Shop = () => {
 					name='email'
 					onChange={handleOnChange}
 				/>
-				<button className='btnASendAction'>Terminar Compra</button>
-			</form>
+				{values.name === '' ? <button className='btnASendAction' disabled={values.name === ''}>Para terminar complete el nombre</button> 
+				:  <button className='btnASendAction' disabled={values.name === ''}>Terminar Compra</button>}
+				
+			</form>}
+			
 			{purchaseID && <MessageSuccess purchaseID={purchaseID} />}
 		</div>
 	);

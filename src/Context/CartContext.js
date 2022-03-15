@@ -7,7 +7,7 @@ const initialCartState = [];
 
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(initialCartState);
-    const [contador, setContador] = useState(0);
+    const [contador, setContador] = useState(1);
 
     const addNewItem = (id, title, price, description, category, image, rating) => {
         const foundItem = cartItems.find(
@@ -21,7 +21,9 @@ export const CartProvider = ({ children }) => {
         }
 
         setCartItems([...cartItems]);
-        console.log(`El nuevo cartItem es: ${cartItems[0].comprar}`);
+        alert(`Agrego ${contador} productos al carrito `)
+
+        setContador(1)
     }
 
     const cantComprar = () => {

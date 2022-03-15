@@ -41,7 +41,7 @@ const Categories = () => {
     }, [categoryClass]);
 
     return (
-        <div>
+        <div className="divItemListContainer">
             {categoryData.map((data) => {
                 return (
                     <div>

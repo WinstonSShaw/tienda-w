@@ -13,6 +13,7 @@ export default function Item({data}) {
           height="140"
           image={data.image}
           alt="green iguana"
+          style={{objectFit:'contain'}}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

@@ -20,6 +20,7 @@ const CartCard = ({data}) => {
                 height="140"
                 image={data.image}
                 alt="green iguana"
+                style={{objectFit:'contain'}}
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -34,7 +35,7 @@ const CartCard = ({data}) => {
                 
                 </CardContent>
 
-                <button onClick={() => deleteItem(data.id)}>Borrar</button>
+                <button className='botones' onClick={() => deleteItem(data.id)}>Borrar</button>
 
             </Card>
         </div>

@@ -10,7 +10,7 @@ import CartCard from "./CartCard";
 const CartList = () => {
     const [cartItems, setCartItems] = useContext(CartContext);
 
-    console.log(`CarList: ${cartItems.length}`)
+    
     return (
 
        

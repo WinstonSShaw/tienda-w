@@ -9,9 +9,11 @@ const styles = {
 const About = () => {
 	return (
 		<div style={styles.container}>
-			About
-			<p>https://v5.reactrouter.com/web/guides/quick-start</p>
-			<p>https://breakingbadapi.com/api/characters</p>
+			<h2>About</h2>
+			<p>
+				Esta es una tienda 100% ficticia, creada a fines de conocer sobre el funcionamiento de REACT. No comparta informacion sensible ya que no es necesaria para ningun tipo de transaccion.
+			</p>
+			
 		</div>
 	);
 };

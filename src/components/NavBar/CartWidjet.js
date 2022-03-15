@@ -20,16 +20,10 @@ const Cart = () => {
             {cartItems.length === 0 ? null : <p>{total}</p>}
             
             <Link to={`/cart`}>
-                {cartItems.length === 0 ? null : <button style={{margin:10} }>Comprar</button>}  
+                {cartItems.length === 0 ? null : <button className="botones" style={{margin:10} }>Comprar</button>}  
             </Link>
 
-            {cartItems.length === 0 ? null : <button style={{margin:10}} onClick={() => clearCart()}>Limpiar</button>}
-            
-
-
-            
-            
-
+            {cartItems.length === 0 ? null : <button className="botones" style={{margin:10}} onClick={() => clearCart()}>Limpiar</button>}
             
             
         </div>
