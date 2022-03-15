@@ -31,7 +31,7 @@ const Shop = () => {
 	// Este estado está destinado a guardar el id de la compra
 	const [purchaseID, setPurchaseID] = useState('');
 
-    const [cartItems, setCartItems] = useContext(CartContext);
+    const [cartItems, setCartItems, addNewItem, cantComprar, cantContador, deleteItem, clearCart] = useContext(CartContext);
 
     const itemsCompr = [];
     const comprados = () => { cartItems.map((item) => {
@@ -59,6 +59,8 @@ const Shop = () => {
 
         
 		setValues(initialState);
+
+		clearCart();
 	};
 
 	return (
